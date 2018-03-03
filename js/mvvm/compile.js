@@ -128,17 +128,23 @@ var compileUtil = {
   },
   // 解析v-model
   model: function (node, vm, exp) {
+    // 实现数据的初始化显示和创建对应watcher
     this.bind(node, vm, exp, 'model');
 
     var me = this,
+      // 得到表达式的值
       val = this._getVMVal(vm, exp);
+    // 给节点绑定input事件监听(输入改变时)
     node.addEventListener('input', function (e) {
+      // 得到输入的最新值
       var newValue = e.target.value;
+      // 如果没有变化, 直接结束
       if (val === newValue) {
         return;
       }
-
+      // 将最新value保存给表达式所对应的属性
       me._setVMVal(vm, exp, newValue);
+      // 保存最新的值
       val = newValue;
     });
   },

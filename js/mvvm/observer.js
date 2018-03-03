@@ -12,7 +12,7 @@ Observer.prototype = {
         // 遍历data中所有属性
         Object.keys(data).forEach(function(key) {
             // 对指定的属性实现响应式的数据绑定
-            me.defineReactive(this.data, key, data[key]);
+            me.defineReactive(me.data, key, data[key]);
         });
     },
 
