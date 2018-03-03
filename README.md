@@ -51,7 +51,7 @@
       	3). 根据指令名确定需要操作元素节点的什么属性
 	        * v-text---textContent属性
 	        * v-html---innerHTML属性
-	        * v-class--class属性
+	        * v-class--className属性
       	4). 将得到的表达式的值设置到对应的属性上
       	5). 移除元素的指令属性
 
@@ -110,3 +110,5 @@
 		2). 双向数据绑定的实现流程:
 	      	* 在解析v-model指令时, 给当前元素添加input监听
 	      	* 当input的value发生改变时, 将最新的值赋值给当前表达式所对应的data属性
+
+## 6. debug调试
