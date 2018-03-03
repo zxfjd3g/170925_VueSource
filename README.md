@@ -92,7 +92,7 @@
 		          depIds //表达式中各级属性所对应的dep对象的集合对象
 		                  //属性名为dep的id, 属性值为dep
 				}
-			
+		
 		5). 总结: dep与watcher的关系: 多对多
 			* 一个data中的属性对应对应一个dep, 一个dep中可能包含多个watcher(模板中有几个表达式使用到了属性)
 			* 模板中一个非事件表达式对应一个watcher, 一个watcher中可能包含多个dep(表达式中包含了几个data属性)
